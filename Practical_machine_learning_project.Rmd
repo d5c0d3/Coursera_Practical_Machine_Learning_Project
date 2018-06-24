@@ -10,30 +10,8 @@ output:
   pdf_document: default
 ---
 
----
-references:
-- id: velloso2013
-  title: Qualitative Activity Recognition of Weight Lifting Exercises.
-  author:
-  - family: Velloso 
-    given: E.
-  - family: Bulling
-    given: A.
-  - family: Gellersen
-    given: H.
-  - family: Ugulino
-    given: W.
-  - family: Fuks
-    given: H.
-  container-title: Proceedings of 4th International Conference in Cooperation with SIGCHI (Augmented Human '13). Stuttgart, Germany: ACM SIGCHI, 2013.
-  URL: 'http://groupware.les.inf.puc-rio.br/har#weight_lifting_exercises'
-  type: article-proceedings
-  issued:
-    year: 2013
----
-
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE, fig.width=10, fig.height=5)
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE, fig.width=10, fig.height=5, cache=TRUE)
 options(width=120)
 #rm(list = ls()) #cleaning environment
 library(lattice)
@@ -58,7 +36,7 @@ Building the predictive model followed these steps:
 
 
 # Data source
-The data for this project come originally from this source: http://groupware.les.inf.puc-rio.br/har. [@velloso2013] 
+The data for this project come originally from this source: http://groupware.les.inf.puc-rio.br/har. [1] 
 
 The training data for this project were prepared by Coursera and are available here:
 
@@ -191,7 +169,7 @@ mod_acc
 oos_err <- 1 - mod_acc 
 oos_err
 ```
-The estimated accuracy of the model is 99.73% and the estimated out-of-sample error based on our fitted model applied to the test dataset is 0.27%.
+The estimated accuracy of the model is 99.8% and the estimated out-of-sample error based on our fitted model applied to the test dataset is 0.02%.
 
 # Apply the model
 We now can apply the model to the testing data set to answer the 20 problems from the Coursera quiz:
@@ -202,3 +180,5 @@ rf_quiz
 ```
 
 # References
+
+[1] Velloso, E.; Bulling, A.; Gellersen, H.; Ugulino, W.; Fuks, H. Qualitative Activity Recognition of Weight Lifting Exercises. Proceedings of 4th International Conference in Cooperation with SIGCHI (Augmented Human '13) . Stuttgart, Germany: ACM SIGCHI, 2013. URL: http://groupware.les.inf.puc-rio.br/har
