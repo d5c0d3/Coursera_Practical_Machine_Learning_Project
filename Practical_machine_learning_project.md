@@ -509,7 +509,7 @@ mod_perf
 ## rdf_n100 138.11 0.9981648 0.001835237
 ```
 
-The run time is significantly reduced wiht only a slight decrease in accuracy in comparison to the 'unlimited' Random Forest model (respectively 99.75% versus 99.82% accuracy). We will use the last model to predict the 20 quiz problems.
+The run time is significantly reduced with only a slight decrease in accuracy in comparison to the 'unlimited' Random Forest model (respectively 99.75% versus 99.82% accuracy). We will use the last model to predict the 20 quiz problems.
 
 # Apply the model to predict the 20 Quiz problems
 
